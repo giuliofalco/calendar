@@ -3,6 +3,6 @@ from django.urls import path, include  # Importa include per collegare le URL de
 
 urlpatterns = [
     path('admin/', admin.site.urls),  # URL per il pannello di amministrazione
-    path('/agenda/', include('cal.urls')),   # Include le URL dell'app 'cal' per la root
+    path('agenda/', include('cal.urls')),   # Include le URL dell'app 'cal' per la root
 ]
 
