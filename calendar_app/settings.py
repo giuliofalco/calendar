@@ -27,6 +27,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+import os
+
+# Percorso principale dei file statici (se serve per raccogliere tutti i file statici)
+STATIC_URL = '/static/'
+
+# Directory in cui Django raccoglierà tutti i file statici (per l'uso in produzione)
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Cartelle aggiuntive per cercare file statici
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'cal/static'),  # Aggiungi questa linea per includere la directory static della tua app
+]
 
 # Application definition
 
